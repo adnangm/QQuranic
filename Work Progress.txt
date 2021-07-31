@@ -1,0 +1,18 @@
+installed Dependencies:
+1. main Navigation
+2. react-native-vector-icons
+3. react-native-paper
+
+
+
+Done with:
+1. Stack Navigation
+2. Drawer Navigation
+3. icon added as drawer option
+4. Bottam tab navigation added
+5. Custom Drawer added
+6. Designed Slash Screen, Sign in Screen, Sign up Screen. 
+7. And Do state change functions on text input change and handle password change etc.
+8. Basic authentication logic added.
+9. Athentication done with a sync storage with sample data...
+10. working on form validationm......
