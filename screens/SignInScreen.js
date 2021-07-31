@@ -7,7 +7,8 @@ import {
     Platform,
     StyleSheet ,
     StatusBar,
-    Alert
+    Alert,
+    ScrollView
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
@@ -114,9 +115,11 @@ const SignInScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
+      <ScrollView>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
-            <Text style={styles.text_header}>Welcome!</Text>
+            <Text style={styles.text_header}>QQuranic</Text>
+            <Text style={styles.text_caption}>Choose the Tutor and Learn</Text>
         </View>
         <Animatable.View 
             animation="fadeInUpBig"
@@ -235,10 +238,29 @@ const SignInScreen = ({navigation}) => {
                 >
                     <Text style={[styles.textSign, {
                         color: '#009387'
-                    }]}>Sign Up</Text>
+                    }]}>Sign Up as Student</Text>
                 </TouchableOpacity>
+                
+                <View style={styles.orView}>
+                    <Text style={styles.orText}>Or</Text>
+                </View>
+
+                <TouchableOpacity
+                    onPress={() => navigation.navigate('SignUpScreen')}
+                    style={[styles.signIn, {
+                        borderColor: '#009387',
+                        borderWidth: 1,
+                        marginTop: 15
+                    }]}
+                >
+                    <Text style={[styles.textSign, {
+                        color: '#009387'
+                    }]}>Sign Up as Tutor</Text>
+                </TouchableOpacity>
+
             </View>
         </Animatable.View>
+        </ScrollView>
       </View>
     );
 };
@@ -251,10 +273,10 @@ const styles = StyleSheet.create({
       backgroundColor: '#009387'
     },
     header: {
-        flex: 1,
+        flex: 0.5,
         justifyContent: 'flex-end',
-        paddingHorizontal: 20,
-        paddingBottom: 50
+        //paddingHorizontal: 20,
+        paddingBottom: 20
     },
     footer: {
         flex: 3,
@@ -267,7 +289,14 @@ const styles = StyleSheet.create({
     text_header: {
         color: '#fff',
         fontWeight: 'bold',
-        fontSize: 30
+        fontSize: 30,
+        textAlign: 'center',
+    },
+    text_caption: {
+        color: '#fff',
+        fontSize: 20,
+        fontWeight: 'bold',
+        textAlign: 'center',
     },
     text_footer: {
         color: '#05375a',
@@ -311,5 +340,15 @@ const styles = StyleSheet.create({
     textSign: {
         fontSize: 18,
         fontWeight: 'bold'
-    }
+    },
+    orView: {
+        paddingTop: 15,
+    },
+    orText: {
+        color: '#009387',
+        textAlign: 'center',
+        fontWeight: 'bold',
+        fontSize: 30,
+    },
+
   });

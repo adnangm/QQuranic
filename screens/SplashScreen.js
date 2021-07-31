@@ -7,7 +7,8 @@ import {
     Dimensions,
     StyleSheet,
     StatusBar,
-    Image
+    Image,
+    ScrollView
 } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 import LinearGradient from 'react-native-linear-gradient';
@@ -28,6 +29,7 @@ const SplashScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
+        <ScrollView>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
             <Animatable.Image 
@@ -64,6 +66,7 @@ const SplashScreen = ({navigation}) => {
             </TouchableOpacity>
             </View>
         </Animatable.View> */}
+        </ScrollView>
       </View>
     );
 };

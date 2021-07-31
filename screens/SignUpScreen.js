@@ -73,6 +73,7 @@ const SignInScreen = ({navigation}) => {
 
     return (
       <View style={styles.container}>
+        <ScrollView>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
             <Text style={styles.text_header}>Register Now!</Text>
@@ -215,6 +216,7 @@ const SignInScreen = ({navigation}) => {
             </View>
             </ScrollView>
         </Animatable.View>
+        </ScrollView>
       </View>
     );
 };
@@ -227,10 +229,11 @@ const styles = StyleSheet.create({
       backgroundColor: '#009387'
     },
     header: {
-        flex: 1,
+        flex: 0.5,
         justifyContent: 'flex-end',
         paddingHorizontal: 20,
-        paddingBottom: 50
+        paddingBottom: 20,
+        paddingTop: 5
     },
     footer: {
         flex: Platform.OS === 'ios' ? 3 : 5,
