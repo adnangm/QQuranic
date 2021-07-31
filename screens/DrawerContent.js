@@ -33,18 +33,16 @@ export function DrawerContent(props) {
                     <View style={styles.userInfoSection}>
                         <View style={{flexDirection:'row',marginTop: 15}}>
                             <Avatar.Image 
-                                source={{
-                                    uri: 'https://api.adorable.io/avatars/50/abott@adorable.png'
-                                }}
+                                source={require('../assets/profile.png')}
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>John Doe</Title>
-                                <Caption style={styles.caption}>@j_doe</Caption>
+                                <Title style={styles.title}>Adnan GM</Title>
+                                <Caption style={styles.caption}>@tutor</Caption>
                             </View>
                         </View>
 
-                        <View style={styles.row}>
+                        {/* <View style={styles.row}>
                             <View style={styles.section}>
                                 <Paragraph style={[styles.paragraph, styles.caption]}>80</Paragraph>
                                 <Caption style={styles.caption}>Following</Caption>
@@ -53,7 +51,7 @@ export function DrawerContent(props) {
                                 <Paragraph style={[styles.paragraph, styles.caption]}>100</Paragraph>
                                 <Caption style={styles.caption}>Followers</Caption>
                             </View>
-                        </View>
+                        </View> */}
                     </View>
 
                     <Drawer.Section style={styles.drawerSection}>
@@ -104,12 +102,34 @@ export function DrawerContent(props) {
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-check-outline" 
+                                name="timer-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Support"
+                            label="Time Logs"
+                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="share-variant" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Invite Friends"
+                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="book" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Quran For Revision"
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>

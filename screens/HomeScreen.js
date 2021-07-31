@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, StatusBar } from 'react-native';
 import { useTheme } from '@react-navigation/native';
+import { ScrollView } from 'react-native-gesture-handler';
 
 const HomeScreen = ({navigation}) => {
 
@@ -10,12 +11,14 @@ const HomeScreen = ({navigation}) => {
   
     return (
       <View style={styles.container}>
+      <ScrollView>
         <StatusBar barStyle= { theme.dark ? "light-content" : "dark-content" }/>
         <Text style={{color: colors.text}}>Home Screen</Text>
       <Button
         title="Go to details screen"
         onPress={() => navigation.navigate("Details")}
       />
+      </ScrollView>
       </View>
     );
 };

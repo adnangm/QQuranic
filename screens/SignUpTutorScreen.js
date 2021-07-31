@@ -16,7 +16,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Feather from 'react-native-vector-icons/Feather';
 
-const SignUpScreen = ({navigation}) => {
+const SignUpTutorScreen = ({navigation}) => {
 
     const [data, setData] = React.useState({
         username: '',
@@ -76,7 +76,7 @@ const SignUpScreen = ({navigation}) => {
         <ScrollView>
           <StatusBar backgroundColor='#009387' barStyle="light-content"/>
         <View style={styles.header}>
-            <Text style={styles.text_header}>Register Now as a Student</Text>
+            <Text style={styles.text_header}>Register Now as a Tutor</Text>
         </View>
         <Animatable.View 
             animation="fadeInUpBig"
@@ -197,7 +197,7 @@ const SignUpScreen = ({navigation}) => {
                 >
                     <Text style={[styles.textSign, {
                         color:'#fff'
-                    }]}>Sign Up as Student</Text>
+                    }]}>Sign Up as Tutor</Text>
                 </LinearGradient>
                 </TouchableOpacity>
 
@@ -221,7 +221,7 @@ const SignUpScreen = ({navigation}) => {
     );
 };
 
-export default SignUpScreen;
+export default SignUpTutorScreen;
 
 const styles = StyleSheet.create({
     container: {

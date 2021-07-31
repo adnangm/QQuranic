@@ -246,7 +246,7 @@ const SignInScreen = ({navigation}) => {
                 </View>
 
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('SignUpScreen')}
+                    onPress={() => navigation.navigate('SignUpTutorScreen')}
                     style={[styles.signIn, {
                         borderColor: '#009387',
                         borderWidth: 1,
@@ -348,7 +348,7 @@ const styles = StyleSheet.create({
         color: '#009387',
         textAlign: 'center',
         fontWeight: 'bold',
-        fontSize: 30,
+        fontSize: 20,
     },
 
   });
