@@ -40,6 +40,9 @@ const SplashScreen = ({navigation}) => {
             resizeMode="stretch"
             />
         </View>
+        <Animatable.View style={styles.devView}>
+            <Text style={styles.devloper}>Developed By www.softin.org</Text>
+        </Animatable.View>
         {/* <Animatable.View 
             style={[styles.footer, {
                 backgroundColor: colors.background
@@ -82,46 +85,56 @@ const styles = StyleSheet.create({
     backgroundColor: '#009387'
   },
   header: {
-      flex: 2,
-      justifyContent: 'center',
-      alignItems: 'center'
+    flex: 3,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
-  footer: {
-      flex: 1,
-      backgroundColor: '#fff',
-      borderTopLeftRadius: 30,
-      borderTopRightRadius: 30,
-      paddingVertical: 50,
-      paddingHorizontal: 30
+  devView: {
+    flex: 1,
+    paddingTop: 250,
   },
+  devloper: {
+    color: '#ffff',
+    fontWeight: 'bold',
+    fontSize: 20,
+    textAlign: 'center',
+  },
+//   footer: {
+//       flex: 1,
+//       backgroundColor: '#fff',
+//       borderTopLeftRadius: 30,
+//       borderTopRightRadius: 30,
+//       paddingVertical: 50,
+//       paddingHorizontal: 30
+//   },
   logo: {
       width: height_logo,
       height: height_logo
   },
-  title: {
-      color: '#05375a',
-      fontSize: 30,
-      fontWeight: 'bold'
-  },
+//   title: {
+//       color: '#05375a',
+//       fontSize: 30,
+//       fontWeight: 'bold'
+//   },
   text: {
       color: 'grey',
       marginTop:5
   },
-  button: {
-      alignItems: 'flex-end',
-      marginTop: 30
-  },
-  signIn: {
-      width: 150,
-      height: 40,
-      justifyContent: 'center',
-      alignItems: 'center',
-      borderRadius: 50,
-      flexDirection: 'row'
-  },
-  textSign: {
-      color: 'white',
-      fontWeight: 'bold'
-  }
+//   button: {
+//       alignItems: 'flex-end',
+//       marginTop: 30
+//   },
+//   signIn: {
+//       width: 150,
+//       height: 40,
+//       justifyContent: 'center',
+//       alignItems: 'center',
+//       borderRadius: 50,
+//       flexDirection: 'row'
+//   },
+//   textSign: {
+//       color: 'white',
+//       fontWeight: 'bold'
+//   }
 });
 
