@@ -16,6 +16,5 @@ Done with:
 8. Basic authentication logic added.
 9. Athentication done with a sync storage with sample data...
 10. working on form validationm......
-
-
-11. working on setting up drawer screens required to client
+11. Basic Design Completed.
+12. 

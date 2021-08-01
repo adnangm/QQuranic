@@ -21,18 +21,20 @@ import {
   DarkTheme as PaperDarkTheme 
 } from 'react-native-paper';
 
+import RootStackScreen from './screens/RootStackScreen';
 import { DrawerContent } from './screens/DrawerContent';
-
 import MainTabScreen from './screens/MainTabScreen';
 import SupportScreen from './screens/SupportScreen';
 import SettingsScreen from './screens/SettingsScreen';
-import BookmarkScreen from './screens/BookmarkScreen';
-
+import LocationScreen from './screens/LocationScreen';
+import PlansAndPricing from './screens/PlansAndPricing';
 import { AuthContext } from './components/context';
 
-import RootStackScreen from './screens/RootStackScreen';
 
 import AsyncStorage from '@react-native-community/async-storage';
+import ChangePassword from './screens/ChangePassword';
+
+
 
 const Drawer = createDrawerNavigator();
 
@@ -171,7 +173,9 @@ const App = () => {
           <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
-          <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
+          <Drawer.Screen name="LocationScreen" component={LocationScreen} />
+          <Drawer.Screen name="PlansAndPricing" component={PlansAndPricing} />
+          <Drawer.Screen name="ChangePassword" component={ChangePassword} />
         </Drawer.Navigator>
       )
     :

@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
-const BookmarkScreen = () => {
+const LocationScreen = () => {
     return (
       <View style={styles.container}>
-        <Text>Bookmark Screen</Text>
+        <Text>Location Screen</Text>
         <Button
           title="Click Here"
           onPress={() => alert('Button Clicked!')}
@@ -13,7 +13,7 @@ const BookmarkScreen = () => {
     );
 };
 
-export default BookmarkScreen;
+export default LocationScreen;
 
 const styles = StyleSheet.create({
   container: {

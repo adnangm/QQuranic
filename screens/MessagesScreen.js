@@ -1,19 +1,19 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
 
-const ExploreScreen = () => {
+const MessagesScreen = ({navigation}) => {
     return (
       <View style={styles.container}>
-        <Text>ExploreScreen</Text>
-        <Button
-          title="Click Here"
-          onPress={() => alert('Button Clicked!')}
-        />
+        <ScrollView>
+        <Text>No conversation found</Text>
+        
+        </ScrollView>
       </View>
     );
 };
 
-export default ExploreScreen;
+export default MessagesScreen;
 
 const styles = StyleSheet.create({
   container: {

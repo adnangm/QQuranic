@@ -24,7 +24,7 @@ const SplashScreen = ({navigation}) => {
         setTimeout(() => {
           setAnimating(false);
           navigation.navigate('SignInScreen')
-        }, 2000);
+        }, 3000);
       }, []);
 
     return (

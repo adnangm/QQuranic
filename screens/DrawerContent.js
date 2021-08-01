@@ -16,7 +16,7 @@ import {
     DrawerItem
 } from '@react-navigation/drawer';
 
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import{ AuthContext } from '../components/context';
 
@@ -58,47 +58,58 @@ export function DrawerContent(props) {
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="home-outline" 
+                                name="pricetag-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Home"
-                            onPress={() => {props.navigation.navigate('Home')}}
+                            label="Plans and Pricing"
+                            onPress={() => {props.navigation.navigate('PlansAndPricing')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-outline" 
+                                name="person-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Profile"
+                            label="Personal Info"
                             onPress={() => {props.navigation.navigate('Profile')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="bookmark-outline" 
+                                name="location-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
-                            label="Bookmarks"
-                            onPress={() => {props.navigation.navigate('BookmarkScreen')}}
+                            label="Locations"
+                            onPress={() => {props.navigation.navigate('LocationScreen')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="account-settings-outline" 
+                                name="lock-closed-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Change Password"
+                            onPress={() => {props.navigation.navigate('LocationScreen')}}
+                        />
+                        {/* <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="settings-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
                             label="Settings"
                             onPress={() => {props.navigation.navigate('SettingsScreen')}}
-                        />
+                        /> */}
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
@@ -113,7 +124,7 @@ export function DrawerContent(props) {
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="share-variant" 
+                                name="share-social-outline" 
                                 color={color}
                                 size={size}
                                 />
@@ -124,12 +135,34 @@ export function DrawerContent(props) {
                         <DrawerItem 
                             icon={({color, size}) => (
                                 <Icon 
-                                name="book" 
+                                name="book-outline" 
                                 color={color}
                                 size={size}
                                 />
                             )}
                             label="Quran For Revision"
+                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="archive-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Archives"
+                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="eye-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Parental Watch"
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>
@@ -149,7 +182,7 @@ export function DrawerContent(props) {
                 <DrawerItem 
                     icon={({color, size}) => (
                         <Icon 
-                        name="exit-to-app" 
+                        name="exit-outline" 
                         color={color}
                         size={size}
                         />

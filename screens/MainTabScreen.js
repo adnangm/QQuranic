@@ -5,63 +5,73 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import HomeScreen from './HomeScreen';
-import DetailsScreen from './DetailsScreen';
-import ExploreScreen from './ExploreScreen';
+import TutorsScreen from './TutorsScreen';
+import MessagesScreen from './MessagesScreen';
+import ClassroomScreen from './ClassroomScreen';
 import ProfileScreen from './ProfileScreen';
+import { DrawerContent } from './DrawerContent';
+import SettingsScreen from './SettingsScreen';
 
-const HomeStack = createStackNavigator();
-const DetailsStack = createStackNavigator();
+const TutorsStack = createStackNavigator();
+const MessagesStack = createStackNavigator();
+const ClassroomStack = createStackNavigator();
 
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
     <Tab.Navigator
-      initialRouteName="Home"
+      initialRouteName="ClassroomStackScreen"
       activeColor="#fff"
     >
       <Tab.Screen
-        name="Home"
-        component={HomeStackScreen}
+        name="Tutors"
+        component={TutorsStackScreen}
         options={{
-          tabBarLabel: 'Home',
+          tabBarLabel: 'Tutors',
           tabBarColor: '#009387',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-home" color={color} size={26} />
+            <Icon name="search-circle" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Notifications"
-        component={DetailsStackScreen}
+        name="MessagesStackScreen"
+        component={MessagesStackScreen}
         options={{
-          tabBarLabel: 'Updates',
-          tabBarColor: '#1f65ff',
+          tabBarLabel: 'Messages',
+          tabBarColor: '#009387',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-notifications" color={color} size={26} />
+            <Icon name="chatbubbles" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Profile"
-        component={ProfileScreen}
+        name="ClassroomStackScreen"
+        component={ClassroomStackScreen}
         options={{
-          tabBarLabel: 'Profile',
-          tabBarColor: '#694fad',
+          tabBarLabel: 'Classroom',
+          tabBarColor: '#009387',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-person" color={color} size={26} />
+            <Icon name="desktop" color={color} size={26} />
           ),
         }}
       />
       <Tab.Screen
-        name="Explore"
-        component={ExploreScreen}
+        name="Settings"
+        component={SettingsScreen}
+        listeners={({ navigation }) => ({
+          tabPress: e => {
+            e.preventDefault();
+            navigation.openDrawer();
+          }
+        })}
         options={{
-          tabBarLabel: 'Explore',
-          tabBarColor: '#d02860',
+          tabBarLabel: 'Settings',
+          tabBarColor: '#009387',
           tabBarIcon: ({ color }) => (
-            <Icon name="ios-aperture" color={color} size={26} />
+            <Icon name="settings" color={color} size={26}></Icon>
           ),
+        
         }}
       />
     </Tab.Navigator>
@@ -69,8 +79,8 @@ const MainTabScreen = () => (
 
 export default MainTabScreen;
 
-const HomeStackScreen = ({navigation}) => (
-<HomeStack.Navigator screenOptions={{
+const TutorsStackScreen = ({navigation}) => (
+<TutorsStack.Navigator screenOptions={{
         headerStyle: {
         backgroundColor: '#009387',
         },
@@ -79,30 +89,56 @@ const HomeStackScreen = ({navigation}) => (
         fontWeight: 'bold'
         }
     }}>
-        <HomeStack.Screen name="Home" component={HomeScreen} options={{
-        title:'Overview',
+        <TutorsStack.Screen name="Tutors" component={TutorsScreen} options={{
+        title:'Tutors',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
+            <Icon.Button name="filter" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerRight: () => (
+          <Icon.Button name="search" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
         )
         }} />
-</HomeStack.Navigator>
+</TutorsStack.Navigator>
 );
 
-const DetailsStackScreen = ({navigation}) => (
-<DetailsStack.Navigator screenOptions={{
+const MessagesStackScreen = ({navigation}) => (
+<MessagesStack.Navigator screenOptions={{
         headerStyle: {
-        backgroundColor: '#1f65ff',
+        backgroundColor: '#009387',
         },
         headerTintColor: '#fff',
         headerTitleStyle: {
         fontWeight: 'bold'
         }
     }}>
-        <DetailsStack.Screen name="Details" component={DetailsScreen} options={{
+        <MessagesStack.Screen name="Messages" component={MessagesScreen} options={{
+          title: 'Messages',
         headerLeft: () => (
-            <Icon.Button name="ios-menu" size={25} backgroundColor="#1f65ff" onPress={() => navigation.openDrawer()}></Icon.Button>
-        )
+            <Icon.Button name="mail-unread-outline" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
+        ),
+        headerRight: () => (
+          <Icon.Button name="search" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
+      )
         }} />
-</DetailsStack.Navigator>
+</MessagesStack.Navigator>
+);
+
+const ClassroomStackScreen = ({navigation}) => (
+  <ClassroomStack.Navigator screenOptions={{
+      headerStyle: {
+      backgroundColor: '#009387',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+      fontWeight: 'bold'
+      }
+  }}>
+    <ClassroomStack.Screen name="Classroom" component={ClassroomScreen} options={{
+      title: 'Classroom',
+      headerRight: () => (
+          <Icon.Button name="share-social-outline" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()} />
+      )
+    }} />
+  </ClassroomStack.Navigator>
 );
   
