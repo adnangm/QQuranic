@@ -1,5 +1,4 @@
 import React from 'react';
-
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -11,6 +10,8 @@ import ClassroomScreen from './ClassroomScreen';
 import ProfileScreen from './ProfileScreen';
 import { DrawerContent } from './DrawerContent';
 import SettingsScreen from './SettingsScreen';
+import ClassroomTabScreen from './ClassroomTabScreen';
+import ShareApp from './ShareApp';
 
 const TutorsStack = createStackNavigator();
 const MessagesStack = createStackNavigator();
@@ -18,7 +19,8 @@ const ClassroomStack = createStackNavigator();
 
 const Tab = createMaterialBottomTabNavigator();
 
-const MainTabScreen = () => (
+const MainTabScreen = (props) => (
+  
     <Tab.Navigator
       initialRouteName="ClassroomStackScreen"
       activeColor="#fff"
@@ -133,12 +135,11 @@ const ClassroomStackScreen = ({navigation}) => (
       fontWeight: 'bold'
       }
   }}>
-    <ClassroomStack.Screen name="Classroom" component={ClassroomScreen} options={{
+    <ClassroomStack.Screen name="Classroom" component={ClassroomTabScreen} options={{
       title: 'Classroom',
       headerRight: () => (
-          <Icon.Button name="share-social-outline" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()} />
+          <Icon.Button name="share-social-outline" size={25} backgroundColor="#009387" onPress={() => navigation.navigate("ShareApp")} />
       )
     }} />
   </ClassroomStack.Navigator>
 );
-  

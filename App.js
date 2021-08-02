@@ -29,7 +29,7 @@ import SettingsScreen from './screens/SettingsScreen';
 import LocationScreen from './screens/LocationScreen';
 import PlansAndPricing from './screens/PlansAndPricing';
 import { AuthContext } from './components/context';
-
+import ShareApp from './screens/ShareApp';
 
 import AsyncStorage from '@react-native-community/async-storage';
 import ChangePassword from './screens/ChangePassword';
@@ -176,6 +176,7 @@ const App = () => {
           <Drawer.Screen name="LocationScreen" component={LocationScreen} />
           <Drawer.Screen name="PlansAndPricing" component={PlansAndPricing} />
           <Drawer.Screen name="ChangePassword" component={ChangePassword} />
+          <Drawer.Screen name="ShareApp" component={ShareApp} />
         </Drawer.Navigator>
       )
     :

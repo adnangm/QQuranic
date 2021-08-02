@@ -1,7 +1,29 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, StatusBar } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { useTheme } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
+import { createStackNavigator } from '@react-navigation/stack';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+const TopTab = createMaterialTopTabNavigator();
+
+function MyTutors() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>My Tutors tab</Text>
+    </View>
+  );
+}
+
+function Invited() {
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>Invited tab</Text>
+    </View>
+  );
+}
+
 
 const ClassroomScreen = ({navigation}) => {
 
@@ -10,15 +32,12 @@ const ClassroomScreen = ({navigation}) => {
   const theme = useTheme();
 
     return (
-      <View style={styles.container}>
-        <ScrollView>
-        <Text>Classroom Screen</Text>
-        <Button
-          title="Click Here"
-          onPress={() => alert('Button Clicked!')}
-        />
-        </ScrollView>
-      </View>
+      <NavigationContainer>
+        <TopTab.Navigator>
+          <TopTab.Screen name="MyTutors" component={MyTutors} />
+          <TopTab.Screen name="Invited" component={Invited} />
+      </TopTab.Navigator>
+      </NavigationContainer>
     );
 };
 
@@ -31,3 +50,39 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
 });
+
+
+
+// import * as React from 'react';
+// import { Text, View } from 'react-native';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+
+// function HomeScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Home!</Text>
+//     </View>
+//   );
+// }
+
+// function SettingsScreen() {
+//   return (
+//     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+//       <Text>Settings!</Text>
+//     </View>
+//   );
+// }
+
+// const Tab = createMaterialTopTabNavigator();
+
+// export default function ClassroomScreen() {
+//   return (
+//     <NavigationContainer>
+//       <Tab.Navigator>
+//         <Tab.Screen name="Home" component={HomeScreen} />
+//         <Tab.Screen name="Settings" component={SettingsScreen} />
+//       </Tab.Navigator>
+//     </NavigationContainer>
+//   );
+// }
