@@ -26,8 +26,10 @@ export default function ClassroomTabScreen ({navigation}) {
       tabBarPosition= 'top'
       tabBarOptions={{
         activeTintColor: '#fff',
-        labelStyle: { fontSize: 12 },
-        style: { backgroundColor: '#499988' },
+        inactiveTintColor:'black',
+        labelStyle: { fontSize: 10 },
+        style: { backgroundColor: '#499988', borderTopWidth: 1, borderTopColor: 'darkgreen' },
+        indicatorStyle:{backgroundColor: "red"}
       }}
     >
       <TopTab.Screen
@@ -60,81 +62,3 @@ export default function ClassroomTabScreen ({navigation}) {
   }
 
 
-
-
-
-// const MyTutorsStackScreen = ({navigation}) => (
-// <MyTutorsStack.Navigator 
-// // screenOptions={{
-// //         headerStyle: {
-// //         backgroundColor: '#009387',
-// //         },
-// //         headerTintColor: '#fff',
-// //         headerTitleStyle: {
-// //         fontWeight: 'bold'
-// //         }
-// //     }}
-//     >
-//         <MyTutorsStack.Screen name="MyTutors" component={MyTutors} 
-//         // options={{
-//         // title:'Tutors',
-//         // headerLeft: () => (
-//         //     <Icon.Button name="filter" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
-//         // ),
-//         // headerRight: () => (
-//         //   <Icon.Button name="search" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
-//         // )
-//         // }} 
-//         />
-// </MyTutorsStack.Navigator>
-// );
-
-// const InvitedStackScreen = ({navigation}) => (
-// <InvitedStack.Navigator 
-// // screenOptions={{
-// //         headerStyle: {
-// //         backgroundColor: '#009387',
-// //         },
-// //         headerTintColor: '#fff',
-// //         headerTitleStyle: {
-// //         fontWeight: 'bold'
-// //         }
-// //     }}
-//     >
-//         <InvitedStack.Screen name="Invited" component={Invited} 
-//       //   options={{
-//       //     title: 'Messages',
-//       //   headerLeft: () => (
-//       //       <Icon.Button name="mail-unread-outline" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
-//       //   ),
-//       //   headerRight: () => (
-//       //     <Icon.Button name="search" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()}></Icon.Button>
-//       // )
-//       //   }} 
-//         />
-// </InvitedStack.Navigator>
-// );
-
-// const RecommendedStackScreen = ({navigation}) => (
-//   <RecommendedStack.Navigator 
-//   // screenOptions={{
-//   //     headerStyle: {
-//   //     backgroundColor: '#009387',
-//   //     },
-//   //     headerTintColor: '#fff',
-//   //     headerTitleStyle: {
-//   //     fontWeight: 'bold'
-//   //     }
-//   // }}
-//   >
-//     <RecommendedStack.Screen name="Recommended" component={Recommended} 
-//     // options={{
-//     //   title: 'Classroom',
-//     //   headerRight: () => (
-//     //       <Icon.Button name="share-social-outline" size={25} backgroundColor="#009387" onPress={() => navigation.openDrawer()} />
-//     //   )
-//     // }} 
-//     />
-//   </RecommendedStack.Navigator>
-// );
-  

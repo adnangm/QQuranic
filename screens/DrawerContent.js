@@ -1,5 +1,7 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Alert, Modal, Pressable } from 'react-native';
+import Share from 'react-native-share';
+import { useState } from 'react';
 import {
     useTheme,
     Avatar,
@@ -26,8 +28,78 @@ export function DrawerContent(props) {
 
     const { signOut, toggleTheme } = React.useContext(AuthContext);
 
+    const myCustomShare = async() => {
+        const shareOptions = {
+          message: 'this is share test message',
+        }
+        try {
+          const ShareResponse = await Share.open(shareOptions);
+         // console.log(JSON.stringify(shareResponse));
+        } catch (error) {
+          console.log('Error =>', error);
+        }
+      };
+    
+    
+    //   const shareAlert = () =>
+    //     Alert.alert(
+    //       "Invite Friends",
+    //       "Invite Friends and earn Classroom Reward",
+    //       [
+            
+    //         {
+    //           text: "Cancel",
+    //           onPress: () => console.log("Cancel Pressed"),
+    //           style: "cancel"
+    //         },
+    //         {
+    //           text: "FAQs",
+    //           onPress: () => console.log("Ask me later pressed")
+    //         },
+    //         { text: "Invite", onPress: () => {this.myCustomShare()}},
+    //       ],
+    //       { cancelable: false }
+    //     );
+
+    const [modalVisible, setModalVisible] = useState(false);
+
     return(
         <View style={{flex:1}}>
+
+<View>
+      <Modal style={styles.centeredView}
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Invite Friends</Text>
+            <Text>Invite Friends and earn Classroom Reward.</Text>
+            <View style={{flexDirection: 'row'}}>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>Cancel</Text>
+            </Pressable>
+            <Pressable
+              style={[styles.button2, styles.buttonClose2]}
+              onPress={myCustomShare}
+            >
+              <Text style={styles.textStyle}>Invite</Text>
+            </Pressable>
+            </View>
+          </View>
+        </View>
+      </Modal>
+      </View>
+
+
             <DrawerContentScrollView {...props}>
                 <View style={styles.drawerContent}>
                     <View style={styles.userInfoSection}>
@@ -130,7 +202,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Invite Friends"
-                            onPress={() => {props.navigation.navigate('SupportScreen')}}
+                            onPress={() => setModalVisible(true)}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -239,4 +311,56 @@ const styles = StyleSheet.create({
       paddingVertical: 12,
       paddingHorizontal: 16,
     },
+    centeredView: {
+        alignItems: "center",
+        justifyContent: 'center',
+        marginTop: '50%'
+      },
+      modalView: {
+        //marginTop: 10,
+        backgroundColor: "white",
+        borderRadius: 10,
+        padding: 75,
+        alignItems: "center",
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 4,
+        elevation: 5
+      },
+      button: {
+        borderRadius: 5,
+        padding: 5,
+        elevation: 12,
+        
+      },
+      button2: {
+        borderRadius: 5,
+        padding: 5,
+        elevation: 12,
+        marginLeft: 20,
+        //alignItems: 'flex-end'
+      },
+      buttonOpen: {
+        backgroundColor: "#F194FF",
+      },
+      buttonClose: {
+        backgroundColor: "#2196F3",
+      },
+      buttonClose2: {
+        backgroundColor: "#2196F3",
+      },
+      textStyle: {
+        color: "white",
+        fontWeight: "bold",
+        textAlign: "center"
+      },
+      modalText: {
+        marginBottom: 15,
+        textAlign: "center"
+      }
+
   });
