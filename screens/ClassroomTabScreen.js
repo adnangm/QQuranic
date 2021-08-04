@@ -13,16 +13,14 @@ import Invited from './classroom/Invited';
 import Recommended from './classroom/Recommended';
 import { NavigationContainer } from '@react-navigation/native';
 
-// const MyTutorsStack = createStackNavigator();
-// const InvitedStack = createStackNavigator();
-// const RecommendedStack = createStackNavigator();
 
 const TopTab = createMaterialTopTabNavigator();
 
 export default function ClassroomTabScreen ({navigation}) {
+  
   return (
     <TopTab.Navigator
-      initialRouteName="MyTutors"
+      initialRouteName="MyTutor"
       tabBarPosition= 'top'
       tabBarOptions={{
         activeTintColor: '#fff',

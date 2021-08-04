@@ -19,3 +19,7 @@ Done with:
 11. Basic Design Completed.
 12. ClassRoom design completed..
 13. working on pop up dialog..........
+
+
+
+working on plans and pricing screen and stack.......

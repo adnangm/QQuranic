@@ -22,17 +22,18 @@ import {
 } from 'react-native-paper';
 
 import RootStackScreen from './screens/RootStackScreen';
-import { DrawerContent } from './screens/DrawerContent';
+
 import MainTabScreen from './screens/MainTabScreen';
 import SupportScreen from './screens/SupportScreen';
+import ChangePassword from './screens/ChangePassword';
 import SettingsScreen from './screens/SettingsScreen';
 import LocationScreen from './screens/LocationScreen';
-import PlansAndPricing from './screens/PlansAndPricing';
-import { AuthContext } from './components/context';
-import ShareApp from './screens/ShareApp';
+import PlansAndPricingScreen from './screens/planAndPricing/PlansAndPricingScreen';
 
+import { AuthContext } from './components/context';
+import { DrawerContent } from './screens/DrawerContent';
 import AsyncStorage from '@react-native-community/async-storage';
-import ChangePassword from './screens/ChangePassword';
+
 
 
 
@@ -174,9 +175,9 @@ const App = () => {
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
           <Drawer.Screen name="LocationScreen" component={LocationScreen} />
-          <Drawer.Screen name="PlansAndPricing" component={PlansAndPricing} />
           <Drawer.Screen name="ChangePassword" component={ChangePassword} />
-          <Drawer.Screen name="ShareApp" component={ShareApp} />
+          <Drawer.Screen name="PlansAndPricingScreen" component={PlansAndPricingScreen} />
+          
         </Drawer.Navigator>
       )
     :

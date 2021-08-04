@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, Alert, Modal, Pressable } from 'react-native';
+import { createStackNavigator } from '@react-navigation/stack';
 import Share from 'react-native-share';
 import { useState } from 'react';
 import {
@@ -19,8 +20,8 @@ import {
 } from '@react-navigation/drawer';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-
 import{ AuthContext } from '../components/context';
+import PlansAndPricingScreen from './planAndPricing/PlansAndPricingScreen';
 
 export function DrawerContent(props) {
 
@@ -39,65 +40,44 @@ export function DrawerContent(props) {
           console.log('Error =>', error);
         }
       };
-    
-    
-    //   const shareAlert = () =>
-    //     Alert.alert(
-    //       "Invite Friends",
-    //       "Invite Friends and earn Classroom Reward",
-    //       [
-            
-    //         {
-    //           text: "Cancel",
-    //           onPress: () => console.log("Cancel Pressed"),
-    //           style: "cancel"
-    //         },
-    //         {
-    //           text: "FAQs",
-    //           onPress: () => console.log("Ask me later pressed")
-    //         },
-    //         { text: "Invite", onPress: () => {this.myCustomShare()}},
-    //       ],
-    //       { cancelable: false }
-    //     );
 
     const [modalVisible, setModalVisible] = useState(false);
 
     return(
         <View style={{flex:1}}>
 
-<View>
-      <Modal style={styles.centeredView}
-        animationType="slide"
-        transparent={true}
-        visible={modalVisible}
-        onRequestClose={() => {
-          Alert.alert("Modal has been closed.");
-          setModalVisible(!modalVisible);
-        }}
-      >
-        <View style={styles.centeredView}>
-          <View style={styles.modalView}>
-            <Text style={styles.modalText}>Invite Friends</Text>
-            <Text>Invite Friends and earn Classroom Reward.</Text>
-            <View style={{flexDirection: 'row'}}>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
-              onPress={() => setModalVisible(!modalVisible)}
-            >
-              <Text style={styles.textStyle}>Cancel</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.button2, styles.buttonClose2]}
-              onPress={myCustomShare}
-            >
-              <Text style={styles.textStyle}>Invite</Text>
-            </Pressable>
+            <View>
+              <Modal style={styles.centeredView}
+                animationType="slide"
+                transparent={true}
+                visible={modalVisible}
+                onRequestClose={() => {
+                  Alert.alert("Modal has been closed.");
+                  setModalVisible(!modalVisible);
+                }}
+                >
+                <View style={styles.centeredView}>
+                  <View style={styles.modalView}>
+                    <Text style={styles.modalText}>Invite Friends</Text>
+                    <Text>Invite Friends and earn Classroom Reward.</Text>
+                    <View style={{flexDirection: 'row'}}>
+                    <Pressable
+                      style={[styles.button, styles.buttonClose]}
+                      onPress={() => setModalVisible(!modalVisible)}
+                    >
+                      <Text style={styles.textStyle}>Cancel</Text>
+                    </Pressable>
+                    <Pressable
+                      style={[styles.button2, styles.buttonClose2]}
+                      onPress={myCustomShare}
+                    >
+                      <Text style={styles.textStyle}>Invite</Text>
+                    </Pressable>
+                    </View>
+                  </View>
+                </View>
+              </Modal>
             </View>
-          </View>
-        </View>
-      </Modal>
-      </View>
 
 
             <DrawerContentScrollView {...props}>
@@ -136,7 +116,7 @@ export function DrawerContent(props) {
                                 />
                             )}
                             label="Plans and Pricing"
-                            onPress={() => {props.navigation.navigate('PlansAndPricing')}}
+                            onPress={() => {props.navigation.navigate('PlansAndPricingScreen')}}
                         />
                         <DrawerItem 
                             icon={({color, size}) => (
@@ -238,6 +218,8 @@ export function DrawerContent(props) {
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>
+
+                    
                     <Drawer.Section title="Preferences">
                         <TouchableRipple onPress={() => {toggleTheme()}}>
                             <View style={styles.preference}>
@@ -250,6 +232,8 @@ export function DrawerContent(props) {
                     </Drawer.Section>
                 </View>
             </DrawerContentScrollView>
+
+            
             <Drawer.Section style={styles.bottomDrawerSection}>
                 <DrawerItem 
                     icon={({color, size}) => (

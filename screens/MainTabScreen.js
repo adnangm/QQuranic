@@ -91,6 +91,7 @@ const MainTabScreen = (props) => {
 export default MainTabScreen;
 
 const TutorsStackScreen = ({navigation}) => {
+  
   const [searchQuery, setSearchQuery] = React.useState('');
 
   const onChangeSearch = query => setSearchQuery(query);
