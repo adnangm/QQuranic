@@ -100,7 +100,7 @@ const PlansAndPricing = ({navigation}) => {
                 onValueChange={toggleSwitch2}
                 value={isRecord}
               />
-              <Text>US$ 8.99/month</Text>
+              <Text style={{textAlign: 'center', fontSize: 30, fontWeight: 'bold', color: '#009387'}}>US$ 8.99/month</Text>
               <Button style={styles.purchaseButton} mode="contained" labelStyle= {{fontSize: 20, fontWeight: 'bold'}} onPress={() => navigation.navigate('Purchase')}>
               <Text style={{color:"black"}}>Purchase</Text>
               </Button>
@@ -110,15 +110,17 @@ const PlansAndPricing = ({navigation}) => {
             </View>
             </View>
         </ScrollView>
+
+        
               <View style={styles.footer}>
                 <Button style={styles.faqButton} mode="contained" onPress={() => navigation.navigate('FAQs')}>
                 <Text style={{color:"white"}}>FAQs</Text>
                 </Button>
-                <Button style={styles.whyButton} mode="contained" onPress={() => navigation.navigate('Purchase')}>
+                <Button style={styles.whyButton} mode="contained" onPress={() => navigation.navigate('WhyQQuranic')}>
                 <Text style={{color:"white"}}>Why QQuranic</Text>
                 </Button>
               </View>
-         
+              
             
           
       </View>
@@ -134,7 +136,7 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
   header: {
-    //flex: 1,
+    flex: 3.8,
     //height: '10%',
     backgroundColor: 'white'
   },
@@ -151,16 +153,19 @@ const styles = StyleSheet.create({
 
   },
   footer: {
+    flex: 0.2,
     flexDirection: 'row',
-    marginTop: '62%'
+    
   },
   faqButton: {
     width: '50%',
     padding: 4,
+    backgroundColor: '#009387'
   },
   whyButton: {
     width: '50%',
     padding: 4,
     marginLeft: '0.5%',
+    backgroundColor: '#009387'
   }
 });

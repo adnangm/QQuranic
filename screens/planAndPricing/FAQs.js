@@ -34,20 +34,39 @@ const FAQs = ({navigation}) => {
         <List.Item title="First item" />
         <List.Item title="Second item" />
       </List.Accordion>
+
+      <List.Accordion
+        title="Can I use Skype or another free software with tutors?"
+        left={props => <List.Icon {...props} icon="folder" />}
+        expanded={expanded}
+        onPress={handlePress}
+        >
+        <List.Item title="No, you can only use QQuranic Classroom" />
+      </List.Accordion>
+
+      <List.Accordion
+        title="Controlled Accordion"
+        left={props => <List.Icon {...props} icon="folder" />}
+        >
+        <List.Item title="First item" />
+        <List.Item title="Second item" />
+      </List.Accordion>
     </List.Section>
+
     
-    <View  style={{backgroundColor: 'lightgray', with: '80%'}}>
+    
+    {/* <View  style={{backgroundColor: 'lightgray', with: '80%'}}>
     <Collapse>
     <CollapseHeader>
       <View>
-        <Text>Can I use Skype or another free software with tutors?</Text>
+        <Text style={{fontSize: 20}}>Can I use Skype or another free software with tutors?</Text>
       </View>
     </CollapseHeader>
     <CollapseBody>
       <Text>No, you can only use QQuranic Classroom</Text>
     </CollapseBody>
-</Collapse>
-</View>
+    </Collapse>
+    </View> */}
 
     
     
