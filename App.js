@@ -29,6 +29,7 @@ import ChangePassword from './screens/ChangePassword';
 import SettingsScreen from './screens/SettingsScreen';
 import LocationScreen from './screens/LocationScreen';
 import PlansAndPricingScreen from './screens/planAndPricing/PlansAndPricingScreen';
+import ProfileScreen from './screens/ProfileScreen';
 
 import { AuthContext } from './components/context';
 import { DrawerContent } from './screens/DrawerContent';
@@ -172,11 +173,13 @@ const App = () => {
       { loginState.userToken !== null ? (
         <Drawer.Navigator drawerContent={props => <DrawerContent {...props} />}>
           <Drawer.Screen name="HomeDrawer" component={MainTabScreen} />
+          <Drawer.Screen name="PlansAndPricingScreen" component={PlansAndPricingScreen} />
+          <Drawer.Screen name="ProfileScreen" component={ProfileScreen} />
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
           <Drawer.Screen name="LocationScreen" component={LocationScreen} />
           <Drawer.Screen name="ChangePassword" component={ChangePassword} />
-          <Drawer.Screen name="PlansAndPricingScreen" component={PlansAndPricingScreen} />
+          
           
         </Drawer.Navigator>
       )

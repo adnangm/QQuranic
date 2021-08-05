@@ -27,7 +27,7 @@ const WhyQQuranic = ({navigation}) => {
         </View>
 
         <View>
-          <Text style={{textAlign: 'center'}}>Video here</Text>
+          <Text style={{textAlign: 'center', padding: '5%'}}>Video here</Text>
         </View>
 
         <View>

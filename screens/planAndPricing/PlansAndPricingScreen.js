@@ -11,6 +11,7 @@ import {Picker} from '@react-native-picker/picker';
 import FAQs from './FAQs';
 import Purchase from './Purchase';
 import WhyQQuranic from './WhyQQuranic';
+import ContactUs from './ContactUs';
 
 const Stack = createStackNavigator();
 
@@ -21,8 +22,7 @@ const PlansAndPricingScreen = ({navigation}) => {
   const theme = useTheme();
   
     return (
-      <View style={styles.container}>
-        
+      <View style={{flex: 1}}>
         <Stack.Navigator>
         <Stack.Screen name="PlanAndPrice" component={PlansAndPricing} options={{
           title: "Plan and Pricing",
@@ -37,7 +37,8 @@ const PlansAndPricingScreen = ({navigation}) => {
         
         <Stack.Screen name="FAQs" component={FAQs} />
         <Stack.Screen name="Purchase" component={Purchase} />
-        <Stack.Screen name="WhyQQuranic" component={WhyQQuranic} />
+        <Stack.Screen name="Why QQuranic" component={WhyQQuranic} />
+        <Stack.Screen name="Contact Us" component={ContactUs} />
       </Stack.Navigator>
       
       </View>
@@ -108,7 +109,7 @@ const PlansAndPricing = ({navigation}) => {
               <Text>The tutors payment is not included in the classroom plan. Tutors have to be paid separately.</Text>
               <View>
             </View>
-            </View>
+          </View>
         </ScrollView>
 
         
@@ -116,7 +117,7 @@ const PlansAndPricing = ({navigation}) => {
                 <Button style={styles.faqButton} mode="contained" onPress={() => navigation.navigate('FAQs')}>
                 <Text style={{color:"white"}}>FAQs</Text>
                 </Button>
-                <Button style={styles.whyButton} mode="contained" onPress={() => navigation.navigate('WhyQQuranic')}>
+                <Button style={styles.whyButton} mode="contained" onPress={() => navigation.navigate('Why QQuranic')}>
                 <Text style={{color:"white"}}>Why QQuranic</Text>
                 </Button>
               </View>
@@ -138,12 +139,15 @@ const styles = StyleSheet.create({
   header: {
     flex: 3.8,
     //height: '10%',
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    width: '98%',
+    alignSelf: 'center'
   },
   heading: {
     fontSize: 30,
     textAlign: 'center',
     fontWeight: 'bold',
+
   },
   purchaseButton: {
     width: '60%',

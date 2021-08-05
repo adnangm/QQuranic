@@ -5,7 +5,7 @@ import { ScrollView } from 'react-native-gesture-handler';
 import { Button, TextInput,   } from 'react-native-paper';
 import { Picker } from '@react-native-picker/picker';
 
-const Purchase = ({navigation}) => {
+const ContactUs = ({navigation}) => {
 
   const { colors } = useTheme();
   const theme = useTheme();
@@ -21,72 +21,40 @@ const Purchase = ({navigation}) => {
         
           <View>
 
-            <View style={{alignContent: 'center', justifyContent: 'center'}}>
-              <Image style={{alignSelf: 'center', marginBottom: '-5%'}} source={require('./atmCards.png')} />
+            <View style={{padding: '3%'}}>
+              <Text style={{textAlign: 'center', fontSize: 18}}>We appreciate youe interest in <Text style={{fontWeight: 'bold'}}>QQuranic.</Text></Text>
+              <Text style={{textAlign: 'center', fontSize: 18}}>If you have any question please see the <Text style={{fontWeight: 'bold'}}>FAQs</Text> page or fill out the form</Text>
+              <Text style={{textAlign: 'center', fontSize: 18}}>info@QQuranic.com</Text>
             </View>
 
-            <View>
-              <Text style={{textAlign: 'center'}}>We accept these cards.</Text>
-            </View>
-            <View style={{flexDirection: 'row', alignContent: 'center', justifyContent: 'center'}}>
-              <Text>Don't have one.</Text>
-              <Button style={{marginTop: '-3%', marginLeft: '-6%'}} onPress={() => navigation.navigate('Contact Us')}>
-              <Text style={{textAlign: 'center'}}> Contact us?</Text>
-              </Button>
-            </View>
+            
 
             <View style={styles.paymentForm}>
-              <View style={{flexDirection: 'row', alignContent: 'center', justifyContent: 'center'}}>
-                <TextInput style={{width: '48.7%'}}
-                  label="First Name"
-                  mode= "flat"
+              
+              <TextInput style={{width: '48.7%', width: '100%'}}
+                  label="Full Name"
+                  //mode= "outlined"
                   value={text}
                   onChangeText={text => setText(text)}
-                />
-                <TextInput style={{width: '48.7%', marginLeft: '2%'}}
-                  label="Last Name"
-                  mode= "flat"
-                  value={text}
-                  onChangeText={text => setText(text)}
-                />
-              </View>
+              />
               <TextInput 
                 label="Email"
-                mode="flat"
+                //mode="outlined"
                 value={text}
                 onChangeText={text => setText(text)}
               />
               <TextInput 
-                label="Billing Address"
-                mode="flat"
+                label="Phone Number"
+                //mode="outlined"
                 value={text}
                 onChangeText={text => setText(text)}
               />
-              <TextInput 
-                label="City"
-                mode="flat"
-                value={text}
-                onChangeText={text => setText(text)}
-              />
-              <TextInput 
-                label="State"
-                mode="flat"
-                value={text}
-                onChangeText={text => setText(text)}
-              />
-              <TextInput 
-                label="Zip Code"
-                mode="flat"
-                value={text}
-                onChangeText={text => setText(text)}
-              />
-              <Text style={{padding: '1%'}}>Country</Text>
+              <Text style={{padding: '1%', fontSize: 15}}>Country</Text>
               <Picker
                 selectedValue={country}
                 onValueChange={(itemValue, itemIndex) =>
                   setCountry(itemValue)
                 }>
-                <Picker.Item label="Select Country" value="Select Country" />  
                 <Picker.Item label="Pakistan" value="Pakistan" />
                 <Picker.Item label="India" value="India" />
                 <Picker.Item label="Saudi Arab" value="Saudi Arab" />
@@ -100,6 +68,18 @@ const Purchase = ({navigation}) => {
                 <Picker.Item label="Malaysia" value="Malaysia" />
                 <Picker.Item label="Australia" value="Australia" />
               </Picker>
+              <TextInput 
+                label="Details"
+                //mode="outlined"
+                value={text}
+                onChangeText={text => setText(text)}
+              />
+            </View>
+
+            <View style={{marginTop: '10%'}}>
+                <Button mode="contained" style={styles.button} >
+                    <Text style={{fontSize: 15, fontWeight: 'bold'}}>Send</Text>
+                </Button>
             </View>
 
           </View>
@@ -109,7 +89,7 @@ const Purchase = ({navigation}) => {
     );
 };
 
-export default Purchase;
+export default ContactUs;
 
 const styles = StyleSheet.create({
   container: {
@@ -119,5 +99,11 @@ const styles = StyleSheet.create({
   },
   paymentForm: {
     width: '98%'
+  },
+  button: {
+      borderRadius: 25,
+      width: '70%',
+      alignSelf: 'center',
+      padding: '1%',
   }
 });

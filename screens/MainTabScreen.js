@@ -185,9 +185,8 @@ const ClassroomStackScreen = ({navigation}) => {
     }
   };
 
-  
-
   const [modalVisible, setModalVisible] = useState(false);
+
   return(
   <View style={{flex: 1}}>
     <View>
@@ -205,18 +204,20 @@ const ClassroomStackScreen = ({navigation}) => {
             <Text style={styles.modalText}>Invite Friends</Text>
             <Text>Invite Friends and earn Classroom Reward.</Text>
             <View style={{flexDirection: 'row'}}>
-            <Pressable
-              style={[styles.button, styles.buttonClose]}
+            <Button
+              mode="contained"
+              style={styles.button}
               onPress={() => setModalVisible(!modalVisible)}
             >
               <Text style={styles.textStyle}>Cancel</Text>
-            </Pressable>
-            <Pressable
-              style={[styles.button2, styles.buttonClose2]}
+            </Button>
+            <Button
+              mode="contained"
+              style={styles.button}
               onPress={myCustomShare}
             >
               <Text style={styles.textStyle}>Invite</Text>
-            </Pressable>
+            </Button>
             </View>
           </View>
         </View>
@@ -268,25 +269,12 @@ const styles = StyleSheet.create({
   },
   button: {
     borderRadius: 5,
-    padding: 5,
+    padding: 1,
     elevation: 12,
+    backgroundColor: '#009387',
+    marginLeft: '5%',
+    marginTop: '14%'
     
-  },
-  button2: {
-    borderRadius: 5,
-    padding: 5,
-    elevation: 12,
-    marginLeft: 20,
-    //alignItems: 'flex-end'
-  },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
-  buttonClose2: {
-    backgroundColor: "#2196F3",
   },
   textStyle: {
     color: "white",
@@ -294,7 +282,8 @@ const styles = StyleSheet.create({
     textAlign: "center"
   },
   modalText: {
-    marginBottom: 15,
-    textAlign: "center"
+    marginBottom: 5,
+    textAlign: "center",
+    fontSize: 18
   }
 });
