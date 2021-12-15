@@ -1,4 +1,4 @@
-# QQuranic 
+# Quran Tutor Mobvile App in React Native
 A React Native Hybrid App.
 Things Used:
 1. React Native Stack Navigator
