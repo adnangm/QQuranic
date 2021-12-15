@@ -1,9 +1,12 @@
-package com.qquranic;
+package com.quran-tutor-app;
 
+import com.facebook.react.bridge.JSIModulePackage;
+import com.swmansion.reanimated.ReanimatedJSIModulePackage;
 import android.app.Application;
 import android.content.Context;
 import com.facebook.react.PackageList;
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactInstanceManager;
 import com.facebook.react.ReactNativeHost;
@@ -30,10 +33,14 @@ public class MainApplication extends Application implements ReactApplication {
           return packages;
         }
 
+
         @Override
         protected String getJSMainModuleName() {
           return "index";
         }
+
+        @Override protected JSIModulePackage getJSIModulePackage() { 
+          return new ReanimatedJSIModulePackage(); }
       };
 
   @Override
@@ -63,7 +70,7 @@ public class MainApplication extends Application implements ReactApplication {
          We use reflection here to pick up the class that initializes Flipper,
         since Flipper library is not available in release mode
         */
-        Class<?> aClass = Class.forName("com.qquranic.ReactNativeFlipper");
+        Class<?> aClass = Class.forName("com.quran-tutor-app.ReactNativeFlipper");
         aClass
             .getMethod("initializeFlipper", Context.class, ReactInstanceManager.class)
             .invoke(null, context, reactInstanceManager);

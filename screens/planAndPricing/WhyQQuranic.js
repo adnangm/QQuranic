@@ -6,7 +6,7 @@ import { Dimensions } from 'react-native';
 import YouTube from 'react-native-youtube';
 
 
-const WhyQQuranic = ({navigation}) => {
+const Whyquran-tutor-app = ({navigation}) => {
 
   const { colors } = useTheme();
   const theme = useTheme();
@@ -42,7 +42,7 @@ const WhyQQuranic = ({navigation}) => {
     );
 };
 
-export default WhyQQuranic;
+export default Whyquran-tutor-app;
 
 const styles = StyleSheet.create({
   container: {
