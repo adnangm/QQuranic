@@ -133,7 +133,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.quran-tutor-app"
+        applicationId "com.QQuranic"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -118,7 +118,7 @@ const SignInScreen = ({navigation}) => {
       <ScrollView>
         <StatusBar backgroundColor="#009387" barStyle="light-content" />
         <View style={styles.header}>
-          <Text style={styles.text_header}>quran-tutor-app</Text>
+          <Text style={styles.text_header}>QQuranic</Text>
           <Text style={styles.text_caption}>Choose the Tutor and Learn</Text>
         </View>
         <Animatable.View

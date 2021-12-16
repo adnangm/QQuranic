@@ -1,4 +1,4 @@
-package com.quran-tutor-app;
+package com.QQuranic;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "quran-tutor-app";
+    return "QQuranic";
   }
 }

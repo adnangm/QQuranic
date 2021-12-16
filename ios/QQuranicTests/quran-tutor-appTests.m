@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface quran-tutor-appTests : XCTestCase
+@interface QQuranicTests : XCTestCase
 
 @end
 
-@implementation quran-tutor-appTests
+@implementation QQuranicTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL(^)(UIView *view))test
 {

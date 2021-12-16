@@ -1,25 +1,26 @@
 import React from 'react';
-import { View, Text, Button, StyleSheet, StatusBar, Image } from 'react-native';
-import { useTheme } from '@react-navigation/native';
-import { ScrollView } from 'react-native-gesture-handler';
-import { Dimensions } from 'react-native';
+import {View, Text, Button, StyleSheet, StatusBar, Image} from 'react-native';
+import {useTheme} from '@react-navigation/native';
+import {ScrollView} from 'react-native-gesture-handler';
+import {Dimensions} from 'react-native';
 import YouTube from 'react-native-youtube';
 
-
-const Whyquran-tutor-app = ({navigation}) => {
-
-  const { colors } = useTheme();
+const WhyQQuranic = ({navigation}) => {
+  const {colors} = useTheme();
   const theme = useTheme();
 
   const deviceWidth = Dimensions.get('window').width;
   const deviceHeight = Dimensions.get('window').height;
-  
-    return (
-      <View style={styles.container}>
+
+  return (
+    <View style={styles.container}>
       <ScrollView>
-        <StatusBar barStyle= { theme.dark ? "light-content" : "dark-content" }/>
+        <StatusBar barStyle={theme.dark ? 'light-content' : 'dark-content'} />
         <View style={{marginTop: '-70%', marginBottom: '-70%'}}>
-          <Image style={{width: deviceWidth, resizeMode: 'contain', }} source={require('./whyus.jpeg')} />
+          <Image
+            style={{width: deviceWidth, resizeMode: 'contain'}}
+            source={require('./whyus.jpeg')}
+          />
         </View>
 
         <View>
@@ -36,19 +37,18 @@ const Whyquran-tutor-app = ({navigation}) => {
           <Text>Cost-effective: Tutor rates to suit all budgets</Text>
           <Text>Technology: Built-in tools to help you learn Quran</Text>
         </View>
-
       </ScrollView>
-      </View>
-    );
+    </View>
+  );
 };
 
-export default Whyquran-tutor-app;
+export default WhyQQuranic;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, 
-    alignItems: 'center', 
-    justifyContent: 'center'
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
   },
   heading: {
     textAlign: 'center',
@@ -56,5 +56,5 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     marginTop: '5%',
     //width: '110%'
-  }
+  },
 });
