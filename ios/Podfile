@@ -1,9 +1,13 @@
 require_relative '../node_modules/react-native/scripts/react_native_pods'
 require_relative '../node_modules/@react-native-community/cli-platform-ios/native_modules'
 
+pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
+
+
+
 platform :ios, '10.0'
 
-target 'QQuranic' do
+target 'qquranic' do
   config = use_native_modules!
 
   use_react_native!(
@@ -14,7 +18,7 @@ target 'QQuranic' do
 
 
 
-  target 'QQuranicTests' do
+  target 'qquranicTests' do
     inherit! :complete
     # Pods for testing
   end

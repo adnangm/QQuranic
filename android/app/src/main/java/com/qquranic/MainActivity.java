@@ -1,4 +1,4 @@
-package com.QQuranic;
+package com.qquranic;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "QQuranic";
+    return "qquranic";
   }
 }

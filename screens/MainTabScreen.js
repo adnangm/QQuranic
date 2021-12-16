@@ -190,7 +190,7 @@ const MessagesStackScreen = ({navigation}) => {
 const ClassroomStackScreen = ({navigation}) => {
   const myCustomShare = async () => {
     const shareOptions = {
-      message: 'Share the QQuranic App Link',
+      message: 'Share the qquranic App Link',
     };
     try {
       const ShareResponse = await Share.open(shareOptions);

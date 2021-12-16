@@ -575,7 +575,7 @@ SPEC CHECKSUMS:
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: cf9b38bf0b2d048436d9a82ad2abe1404f11e7de
   FBLazyVector: e686045572151edef46010a6f819ade377dfeb4b
-  FBReactNativeSpec: 5d610fb79f571089f65062e4bac1b5df28b663e5
+  FBReactNativeSpec: ef7b9b7734d1b785632c08431eb3cafb894e8929
   Flipper: d3da1aa199aad94455ae725e9f3aa43f3ec17021
   Flipper-DoubleConversion: 38631e41ef4f9b12861c67d17cb5518d06badc41
   Flipper-Folly: 755929a4f851b2fb2c347d533a23f191b008554c
@@ -628,6 +628,6 @@ SPEC CHECKSUMS:
   YogaKit: f782866e155069a2cca2517aafea43200b01fd5a
   YoutubePlayer-in-WKWebView: 4fca3b4f6f09940077bfbae7bddb771f2b43aacd
 
-PODFILE CHECKSUM: d2f270c1ed62200fd0613df65fd92a8db708231f
+PODFILE CHECKSUM: 07a8cdf1d75d1ee7b3e07fec06dbf3be6920f994
 
 COCOAPODS: 1.11.2

@@ -5,7 +5,7 @@ import {ScrollView} from 'react-native-gesture-handler';
 import {Dimensions} from 'react-native';
 import YouTube from 'react-native-youtube';
 
-const WhyQQuranic = ({navigation}) => {
+const Whyqquranic = ({navigation}) => {
   const {colors} = useTheme();
   const theme = useTheme();
 
@@ -42,7 +42,7 @@ const WhyQQuranic = ({navigation}) => {
   );
 };
 
-export default WhyQQuranic;
+export default Whyqquranic;
 
 const styles = StyleSheet.create({
   container: {

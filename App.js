@@ -5,11 +5,13 @@ import {
   DefaultTheme as NavigationDefaultTheme,
   DarkTheme as NavigationDarkTheme,
 } from '@react-navigation/native';
+// import FontAwesome from '@react-native-vector-icons/FontAwesome';
+// import Feather from '@react-native-vector-icons/Feather';
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import {
-  FontAwesomeIcon,
-  FontAwesome,
-} from '@fortawesome/react-native-fontawesome';
+// import {
+//   FontAwesomeIcon,
+//   FontAwesome,
+// } from '@fortawesome/react-native-fontawesome';
 import {
   Provider as PaperProvider,
   DefaultTheme as PaperDefaultTheme,

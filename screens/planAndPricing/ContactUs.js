@@ -22,7 +22,7 @@ const ContactUs = ({navigation}) => {
           <View style={{padding: '3%'}}>
             <Text style={{textAlign: 'center', fontSize: 18}}>
               We appreciate youe interest in{' '}
-              <Text style={{fontWeight: 'bold'}}>QQuranic.</Text>
+              <Text style={{fontWeight: 'bold'}}>qquranic.</Text>
             </Text>
             <Text style={{textAlign: 'center', fontSize: 18}}>
               If you have any question please see the{' '}
@@ -30,7 +30,7 @@ const ContactUs = ({navigation}) => {
               the form
             </Text>
             <Text style={{textAlign: 'center', fontSize: 18}}>
-              info@QQuranic.com
+              info@qquranic.com
             </Text>
           </View>
 

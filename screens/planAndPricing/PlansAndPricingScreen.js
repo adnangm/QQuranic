@@ -17,7 +17,7 @@ import {Picker} from '@react-native-picker/picker';
 
 import FAQs from './FAQs';
 import Purchase from './Purchase';
-import WhyQQuranic from './WhyQQuranic';
+import Whyqquranic from './Whyqquranic';
 import ContactUs from './ContactUs';
 
 const Stack = createStackNavigator();
@@ -50,7 +50,7 @@ const PlansAndPricingScreen = ({navigation}) => {
 
         <Stack.Screen name="FAQs" component={FAQs} />
         <Stack.Screen name="Purchase" component={Purchase} />
-        <Stack.Screen name="Why QQuranic" component={WhyQQuranic} />
+        <Stack.Screen name="Why qquranic" component={Whyqquranic} />
         <Stack.Screen name="Contact Us" component={ContactUs} />
       </Stack.Navigator>
     </View>
@@ -155,8 +155,8 @@ const PlansAndPricing = ({navigation}) => {
         <Button
           style={styles.whyButton}
           mode="contained"
-          onPress={() => navigation.navigate('Why QQuranic')}>
-          <Text style={{color: 'white'}}>Why QQuranic</Text>
+          onPress={() => navigation.navigate('Why qquranic')}>
+          <Text style={{color: 'white'}}>Why qquranic</Text>
         </Button>
       </View>
     </View>

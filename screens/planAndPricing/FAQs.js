@@ -26,7 +26,7 @@ const FAQs = ({navigation}) => {
           left={props => <List.Icon {...props} icon="folder" />}
           expanded={expanded}
           onPress={handlePress}>
-          <List.Item title="No, you can only use QQuranic Classroom" />
+          <List.Item title="No, you can only use qquranic Classroom" />
         </List.Accordion>
 
         <List.Accordion
@@ -41,7 +41,7 @@ const FAQs = ({navigation}) => {
           left={props => <List.Icon {...props} icon="folder" />}
           expanded={expanded}
           onPress={handlePress}>
-          <List.Item title="No, you can only use QQuranic Classroom" />
+          <List.Item title="No, you can only use qquranic Classroom" />
         </List.Accordion>
 
         <List.Accordion
@@ -60,7 +60,7 @@ const FAQs = ({navigation}) => {
       </View>
     </CollapseHeader>
     <CollapseBody>
-      <Text>No, you can only use QQuranic Classroom</Text>
+      <Text>No, you can only use qquranic Classroom</Text>
     </CollapseBody>
     </Collapse>
     </View> */}
