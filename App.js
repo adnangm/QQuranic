@@ -5,8 +5,6 @@ import {
   DefaultTheme as NavigationDefaultTheme,
   DarkTheme as NavigationDarkTheme,
 } from '@react-navigation/native';
-// import FontAwesome from '@react-native-vector-icons/FontAwesome';
-// import Feather from '@react-native-vector-icons/Feather';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 // import {
 //   FontAwesomeIcon,
